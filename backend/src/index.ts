@@ -2,7 +2,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import morgan from 'morgan';
-// import { connectDB } from './config/db';  // Import the connectDB function
+import { connectDB } from './config/db';  // Import the connectDB function
 
 // Load environment variables
 dotenv.config();
@@ -20,7 +20,7 @@ app.use(cors());
 app.use(morgan('dev'));
 
 // Connect to the database
-// connectDB();
+connectDB();
 
 // Example route to test the server
 app.get('/', (req: Request, res: Response) => {
