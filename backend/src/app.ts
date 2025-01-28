@@ -3,7 +3,10 @@ import { createServer } from './config/server';
 
 
 // Set up the port from environment variables
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
+
+console.log("🔥-:Project Started:-🔥");
+
 
 createServer().then(server => {
   server.listen(PORT, () => {
@@ -11,5 +14,5 @@ createServer().then(server => {
   });
 }).catch(err => {
   console.error(err);
-  }
+}
 );  
